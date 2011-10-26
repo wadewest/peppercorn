@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Peppercorn::VERSION
   s.authors     = ["Wade West"]
   s.email       = ["wwest81@gmail.com"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/wadewest/peppercorn"
   s.summary     = %q{A simple gem to truncate HTML, with other features coming in the future.}
   s.description = %q{A simple gem to truncate HTML, with other features coming in the future.}
 
