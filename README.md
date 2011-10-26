@@ -1,4 +1,4 @@
-== License
+h1. License
 
 Copyright (c) 2011 Wade West
 
