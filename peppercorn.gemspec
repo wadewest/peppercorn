@@ -24,4 +24,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency "guard-rspec", "~> 0.5"
   s.add_development_dependency "guard-yard", "~> 1.0"
   # s.add_runtime_dependency "rest-client"
+  s.add_dependency "nokogiri"
 end
