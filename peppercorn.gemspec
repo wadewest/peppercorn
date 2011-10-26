@@ -21,5 +21,7 @@ Gem::Specification.new do |s|
   # specify any dependencies here; for example:
   s.add_development_dependency "yard", "~> 0.7"
   s.add_development_dependency "rspec", "~> 2.7"
+  s.add_development_dependency "guard-rspec", "~> 0.5"
+  s.add_development_dependency "guard-yard", "~> 1.0"
   # s.add_runtime_dependency "rest-client"
 end
