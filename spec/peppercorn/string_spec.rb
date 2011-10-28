@@ -38,4 +38,9 @@ describe String do
     @string.truncate(3, opts).should eql "Hello World, I#{opts[:tail]}"
   end
   
+  it "should be able to use a Nokogiri::XML::Node as the tail" do
+    opts = {:tail => Nokogiri::HTML::DocumentFragment.parse("...<a href=\"some_page.html\">Read More</a>")}
+    @string.truncate(3, opts).should eql "Hello World, I#{opts[:tail].to_s}"
+  end
+  
 end
