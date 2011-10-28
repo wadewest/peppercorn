@@ -29,7 +29,7 @@ module Peppercorn
     # @since 0.0.1
     # @return [String] the stripped version of the string
     def strip_end
-      return sub(/(\s+)$/, '')
+      return rstrip
     end
   
     # Returns the string with all HTML tags removed

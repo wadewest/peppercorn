@@ -38,7 +38,7 @@ module Peppercorn
         
         if opts[:strip]
           last_text_node = target.last_text_node
-          last_text_node.content = last_text_node.content.sub(/(\s+)$/, '') if last_text_node
+          last_text_node.content = last_text_node.content.strip_end if last_text_node
         end
         
         if !opts[:tail].to_s.empty? and overran
