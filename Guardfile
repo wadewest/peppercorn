@@ -5,6 +5,7 @@ guard 'yard' do
   watch(%r{app/.+\.rb})
   watch(%r{lib/.+\.rb})
   watch(%r{ext/.+\.(c|cpp|rb)})
+  watch(%r{.*\.md}) { "doc" }
 end
 
 guard 'rspec', :version => 2 do
