@@ -3,7 +3,7 @@ require 'spec_helper'
 describe String do
   
   before do
-    @string = "<p><em class='strong'>Hello World</em>, I <i>can</i> make HTML truncation easy.</p>"
+    @string = "<p><em class=\"strong\">Hello World</em>, I <i>can</i> make HTML truncation easy.</p>"
     @html = Nokogiri::HTML::DocumentFragment.parse @string
   end
 
@@ -12,7 +12,7 @@ describe String do
   end
 
   it "should not truncate some HTML that is shorter than length" do
-    @html.truncate(30).should eql @html.to_s
+    @html.truncate(30).should eql @string
   end
   
 end
