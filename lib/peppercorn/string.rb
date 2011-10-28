@@ -8,7 +8,7 @@ module Peppercorn
     # @since 0.0.1
     # @param [Fixnum] length the number of word to truncate on
     # @param [Hash] opts hash of truncation options
-    # @option opts [String, nil] :tail ("&#8230;") the string to append to the truncated string
+    # @option opts [#to_s, nil] :tail ("&#8230;") the object to append to the truncated string
     # @return [String] the truncated string
     def truncate(length=30, opts={})
       opts = Peppercorn::DEFAULT_TRUNCATION_OPTIONS.merge(opts)
