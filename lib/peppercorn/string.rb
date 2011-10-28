@@ -45,8 +45,7 @@ module Peppercorn
     # @return [String] the truncated html
     # @option opts [String, Nokogiri::XML::Node, nil] :tail ("&#8230;") string or xml node to append to the truncated string
     def truncate_html(length=30, opts={})
-      string = Nokogiri::HTML::DocumentFragment.parse(self).truncate(length, opts)
-      return string
+      Nokogiri::HTML::DocumentFragment.parse(self).truncate(length, opts)
     end
   end
 end
