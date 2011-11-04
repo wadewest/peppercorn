@@ -5,12 +5,12 @@ module Peppercorn
   module String
   
     # Truncate a string to "length" words
-    # @since 0.0.1
+    # @since 0.0.3
     # @param [Fixnum] length the number of word to truncate on
     # @param [Hash] opts hash of truncation options
     # @option opts [#to_s, nil] :tail ("&#8230;") the object to append to the truncated string
     # @return [String] the truncated string
-    def truncate(length=30, opts={})
+    def peppercorn_truncate(length=30, opts={})
       opts = Peppercorn::DEFAULT_TRUNCATION_OPTIONS.merge(opts)
       tokens = scan(/\W*\w+\W*/)
       string_tokens = tokens[0...length]
@@ -23,6 +23,12 @@ module Peppercorn
         string = string.child if string.children.size == 1
       end
       return opts[:return_hash] ? {:text => string, :overran => overran, :count => [length, tokens.size].min} : string
+    end
+    
+    # Alias for #peppercorn_truncate
+    # @since 0.0.1
+    def truncate(length=30, opts={})
+      peppercorn_truncate(length, opts)
     end
   
     # Strips all whitespaces from the end of the string
