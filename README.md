@@ -1,3 +1,23 @@
+About Peppercorn
+================
+
+Peppercorn aims to be a simple and easy to use library for truncating HTML properly.  It works using the 
+fast Nokogiri ruby gem to parse a string of HTML into a document fragment.  Then steppes through that document's
+children until it has counted the desired number of words.
+
+Usage
+=====
+
+The simple case is a simple string: "Hello World"
+    "Hello World".truncate_html(1)  # => "Hello&#8230;"
+
+Of course if you don't like "&#8230;" on the end you could use something else:
+    "Hello World".truncate_html(1, :tail => " All")  # => "Hello All"
+
+
+
+{include:file:CHANGELOG.md}
+
 License
 =======
 
