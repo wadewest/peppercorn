@@ -9,14 +9,26 @@ Usage
 =====
 
 The simple case is a simple string: "Hello World"
+
     "Hello World".truncate_html(1)  # => "Hello&#8230;"
 
 Of course if you don't like "&#8230;" on the end you could use something else:
+
     "Hello World".truncate_html(1, :tail => " All")  # => "Hello All"
 
 
+Changelog
+===
 
-{include:file:CHANGELOG.md}
+* 0.0.3 2011/11/04
+  * Renamed String#truncate to String#peppercorn_truncate so peppercorn will work with rails
+
+* 0.0.2 2011/10/28
+  * Some refactoring and Added Nokogiri::XML::Node#appendable_node
+
+* 0.0.1 2011/10/25
+  * Initial Release
+
 
 License
 =======
