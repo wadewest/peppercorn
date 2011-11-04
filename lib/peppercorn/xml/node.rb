@@ -17,7 +17,7 @@ module Peppercorn
         overran = false
     
         if doc.text?
-          result = content.truncate(length, opts.merge(Peppercorn::TRUNCATE_CHILD_OPTS))
+          result = content.peppercorn_truncate(length, opts.merge(Peppercorn::TRUNCATE_CHILD_OPTS))
           target = result[:text]
           count = result[:count]
           overran = result[:overran]
