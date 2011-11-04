@@ -16,6 +16,19 @@ Of course if you don't like "&#8230;" on the end you could use something else:
 
     "Hello World".truncate_html(1, :tail => " All")  # => "Hello All"
 
+Now some simple HTML examples:
+
+    "<p>Hello World, I make HTML truncation easy.</p>".truncate_html(5) # => "<p>Hello World, I make HTML&#8230;</p>"
+    "<span>Hello World, I make HTML truncation easy.</span>".truncate_html(5) # => "<span>Hello World, I make HTML</span>&#8230;"
+
+Notice the location of the tail in both examples.  In the first example the tail is placed before the end of the paragraph. 
+In the second, it is placed right after the span.  Peppercorn will not append the tail to an inline level element.  As a 
+result you can use a link in the tail since 'a' is an inline element:
+
+    "<p><span>Hello World, I make HTML truncation easy.</span></p>".truncate_html(5, :tail = "...<a href\"read_more.html\">Read More</a>")
+
+becomes:
+`"<p><span>Hello World, I make HTML</span>...<a href\"read_more.html\">Read More</a></p>"`
 
 Changelog
 ===
