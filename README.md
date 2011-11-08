@@ -25,7 +25,7 @@ Notice the location of the tail in both examples.  In the first example the tail
 In the second, it is placed right after the span.  Peppercorn will not append the tail to an inline level element.  As a 
 result you can use a link in the tail since 'a' is an inline element:
 
-    "<p><span>Hello World, I make HTML truncation easy.</span></p>".truncate_html(5, :tail = "...<a href\"read_more.html\">Read More</a>")
+    "<p><span>Hello World, I make HTML truncation easy.</span></p>".truncate_html(5, :tail => "...<a href\"read_more.html\">Read More</a>")
 
 becomes:
 `"<p><span>Hello World, I make HTML</span>...<a href\"read_more.html\">Read More</a></p>"`
